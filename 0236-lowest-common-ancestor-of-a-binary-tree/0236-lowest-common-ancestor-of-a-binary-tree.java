@@ -18,14 +18,13 @@ class Solution {
       if(root == null) return false;
       if(p == root || q == root){
           node = root;
-          System.out.println(root.val);
+          
           return true;
       }
       boolean left = helper(root.left,p,q);
       boolean right = helper(root.right,p,q);
       if(left == true && right == true){
           node = root;
-          System.out.println(root.val);
           return true;
       }
       else if(left == true || right == true) return true;
